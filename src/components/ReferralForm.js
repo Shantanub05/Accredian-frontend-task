@@ -1,14 +1,23 @@
 // src/components/ReferralForm.js
 
 import React, { useState } from "react";
-import { Box, Button, TextField, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  TextField,
+  Typography,
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel,
+} from "@mui/material";
 
 const ReferralForm = () => {
   const [formData, setFormData] = useState({
     referrerName: "",
     refereeName: "",
     email: "",
-    course: "",
+    program: "",
   });
 
   const handleChange = (e) => {
@@ -55,15 +64,41 @@ const ReferralForm = () => {
         fullWidth
         required
       />
-      <TextField
-        label="Course"
-        name="course"
-        value={formData.course}
-        onChange={handleChange}
-        margin="normal"
-        fullWidth
-        required
-      />
+      <FormControl fullWidth margin="normal" required>
+        <InputLabel id="program-label">Select Program</InputLabel>
+        <Select
+          labelId="program-label"
+          id="program"
+          name="program"
+          value={formData.program}
+          onChange={handleChange}
+          label="Select Program"
+          sx={{
+            "& .MuiSelect-select": {
+              paddingTop: "12px",
+              paddingBottom: "12px",
+            },
+            "& .MuiInputLabel-root": {
+              top: "-6px", // Adjust this value as needed
+            },
+          }}
+        >
+          <MenuItem value="">
+            <em>None</em>
+          </MenuItem>
+          <MenuItem value="Data Science">Data Science</MenuItem>
+          <MenuItem value="Product Management">Product Management</MenuItem>
+          <MenuItem value="General Management">General Management</MenuItem>
+          <MenuItem value="HR Analytics">HR Analytics</MenuItem>
+          <MenuItem value="Sales and Marketing">Sales and Marketing</MenuItem>
+          <MenuItem value="Digital Transformation">
+            Digital Transformation
+          </MenuItem>
+          <MenuItem value="Operations & Supply Chain Management">
+            Operations & Supply Chain Management
+          </MenuItem>
+        </Select>
+      </FormControl>
       <Button type="submit" variant="contained" color="primary" sx={{ mt: 2 }}>
         Submit
       </Button>
