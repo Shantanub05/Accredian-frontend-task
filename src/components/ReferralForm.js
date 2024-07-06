@@ -11,6 +11,7 @@ import {
   FormControl,
   InputLabel,
 } from "@mui/material";
+import { sendReferral } from "../components/apiService"; // Import the sendReferral function
 
 const ReferralForm = () => {
   const [formData, setFormData] = useState({
@@ -25,10 +26,10 @@ const ReferralForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic
-    console.log(formData);
+    // Call the sendReferral function
+    await sendReferral(formData);
   };
 
   return (
