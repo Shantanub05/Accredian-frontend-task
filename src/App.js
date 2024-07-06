@@ -6,7 +6,7 @@ import HeroSection from "./components/HeroSection";
 import HowToRefer from "./components/HowToRefer";
 import Modal from "./components/Modal";
 import { Snackbar, Alert } from "@mui/material";
-import { sendReferral } from "./components/apiService"; // Import the function
+import { sendReferral } from "./components/apiService"; // Correct import path
 import "./index.css"; // Ensure global styles are applied
 
 function App() {

@@ -16,6 +16,8 @@ const Modal = ({ onClose, onSubmit }) => {
     program: "",
   });
 
+  const [errors, setErrors] = useState({});
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -23,9 +25,29 @@ const Modal = ({ onClose, onSubmit }) => {
     });
   };
 
+  const validate = () => {
+    let tempErrors = {};
+    tempErrors.referrerName = formData.referrerName
+      ? ""
+      : "This field is required.";
+    tempErrors.refereeName = formData.refereeName
+      ? ""
+      : "This field is required.";
+    tempErrors.email = formData.email ? "" : "This field is required.";
+    if (formData.email && !/\S+@\S+\.\S+/.test(formData.email)) {
+      tempErrors.email = "Email is not valid.";
+    }
+    tempErrors.program = formData.program ? "" : "This field is required.";
+
+    setErrors(tempErrors);
+    return Object.values(tempErrors).every((x) => x === "");
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit(formData);
+    if (validate()) {
+      onSubmit(formData);
+    }
   };
 
   return (
@@ -55,6 +77,8 @@ const Modal = ({ onClose, onSubmit }) => {
             fullWidth
             margin="normal"
             required
+            error={!!errors.referrerName}
+            helperText={errors.referrerName}
           />
           <TextField
             label="Referee Name"
@@ -64,6 +88,8 @@ const Modal = ({ onClose, onSubmit }) => {
             fullWidth
             margin="normal"
             required
+            error={!!errors.refereeName}
+            helperText={errors.refereeName}
           />
           <TextField
             label="Email"
@@ -74,6 +100,8 @@ const Modal = ({ onClose, onSubmit }) => {
             fullWidth
             margin="normal"
             required
+            error={!!errors.email}
+            helperText={errors.email}
           />
           <TextField
             select
@@ -84,6 +112,8 @@ const Modal = ({ onClose, onSubmit }) => {
             fullWidth
             margin="normal"
             required
+            error={!!errors.program}
+            helperText={errors.program}
           >
             <MenuItem value="Data Science">Data Science</MenuItem>
             <MenuItem value="Product Management">Product Management</MenuItem>
