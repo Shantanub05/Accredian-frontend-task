@@ -24,14 +24,14 @@ const TopNavigationBar = () => {
         >
           <Typography
             variant="body2"
-            sx={{ fontSize: "1rem", color: "#212529" }} // Increase font size
+            sx={{ fontSize: "1rem", color: "#212529" }} 
           >
             Navigate your ideal career path with tailored expert advice
           </Typography>
           <Link
             href="#"
             underline="none"
-            sx={{ color: "#007bff", fontSize: "1rem", marginLeft: "8px" }} // Increase font size
+            sx={{ color: "#007bff", fontSize: "1rem", marginLeft: "8px" }} 
           >
             Contact Expert
           </Link>
