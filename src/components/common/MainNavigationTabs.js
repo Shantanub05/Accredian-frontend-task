@@ -22,8 +22,8 @@ const MainNavigationTabs = () => {
           },
         }}
         sx={{
-          maxWidth: "600px", // Further reduce the max width
-          margin: "0 auto", // Center the tabs
+          maxWidth: "600px", 
+          margin: "0 auto", 
           "& .MuiTabs-flexContainer": {
             justifyContent: "center",
             backgroundColor: "#f5f5f5",
@@ -37,7 +37,7 @@ const MainNavigationTabs = () => {
             fontWeight: "bold",
             borderRadius: "25px",
             mx: 1,
-            minHeight: "36px", // Adjust height to match the design
+            minHeight: "36px", 
             py: 1,
             px: 2,
           },

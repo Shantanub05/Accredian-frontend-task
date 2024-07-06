@@ -59,23 +59,23 @@ const styles = {
   sidebar: {
     width: "270px",
     boxShadow: "0px 1px 24.4px 1px rgba(0, 0, 0, 0.16)",
-    borderRadius: "14px", // Rounded corners for the sidebar
+    borderRadius: "14px", 
     marginRight: 16,
-    overflow: "hidden", // Ensure no white part is visible
+    overflow: "hidden",
   },
   sidebarHeader: {
     backgroundColor: "#1A73E8",
     color: "#FFFFFF",
-    borderRadius: "14px 14px 0px 0px", // Rounded top corners
+    borderRadius: "14px 14px 0px 0px", 
   },
   tableContainer: {
-    boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)", // More shadow around the table
-    borderRadius: "14px", // Rounded corners for the table
-    overflow: "hidden", // Ensures the rounded corners are applied to the table content
+    boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)", 
+    borderRadius: "14px", 
+    overflow: "hidden", 
   },
   tableHeader: {
-    backgroundColor: "#d9e7ff", // Match the background color
-    color: "#1A237E", // Match font color
+    backgroundColor: "#d9e7ff",
+    color: "#1A237E", 
   },
   tableCell: {
     borderRight: "1px solid #ddd",
@@ -84,7 +84,7 @@ const styles = {
     },
   },
   centeredTableCell: {
-    textAlign: "center", // Center the text
+    textAlign: "center", 
     borderRight: "1px solid #ddd",
     "&:last-child": {
       borderRight: "none",

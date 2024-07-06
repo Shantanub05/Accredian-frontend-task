@@ -11,7 +11,7 @@ import {
   FormControl,
   InputLabel,
 } from "@mui/material";
-import { sendReferral } from "../apiService"; // Import the sendReferral function
+import { sendReferral } from "../apiService";
 
 const ReferralForm = () => {
   const [formData, setFormData] = useState({
@@ -80,7 +80,7 @@ const ReferralForm = () => {
               paddingBottom: "12px",
             },
             "& .MuiInputLabel-root": {
-              top: "-6px", // Adjust this value as needed
+              top: "-6px", 
             },
           }}
         >
