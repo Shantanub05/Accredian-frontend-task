@@ -25,7 +25,7 @@ const faqs = [
     answer:
       "The minimum system configuration required is a computer with 4GB RAM, 64-bit Windows or macOS, and a stable internet connection.",
   },
-  // Add more FAQ items as necessary
+ 
 ];
 
 const styles = {
@@ -47,12 +47,12 @@ const styles = {
   headerText: {
     marginTop: 16,
     textAlign: "center",
-    marginBottom: 32, // Increased space between title and FAQ elements
+    marginBottom: 32, 
   },
   accordion: {
     boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.1)",
     borderRadius: "8px",
-    marginBottom: 16, // Increased space between accordions
+    marginBottom: 16, 
   },
   accordionSummary: {
     fontWeight: "bold",
