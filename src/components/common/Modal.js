@@ -6,6 +6,7 @@ import {
   Typography,
   Modal as MuiModal,
   MenuItem,
+  CircularProgress,
 } from "@mui/material";
 
 const Modal = ({ onClose, onSubmit }) => {
@@ -17,6 +18,7 @@ const Modal = ({ onClose, onSubmit }) => {
   });
 
   const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -43,10 +45,12 @@ const Modal = ({ onClose, onSubmit }) => {
     return Object.values(tempErrors).every((x) => x === "");
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validate()) {
-      onSubmit(formData);
+      setIsSubmitting(true);
+      await onSubmit(formData);
+      setIsSubmitting(false);
     }
   };
 
@@ -128,8 +132,14 @@ const Modal = ({ onClose, onSubmit }) => {
             </MenuItem>
           </TextField>
           <Box sx={{ mt: 2, textAlign: "right" }}>
-            <Button variant="contained" color="primary" type="submit">
-              Submit
+            <Button
+              variant="contained"
+              color="primary"
+              type="submit"
+              disabled={isSubmitting}
+              startIcon={isSubmitting && <CircularProgress size={20} />}
+            >
+              {isSubmitting ? "Submitting..." : "Submit"}
             </Button>
           </Box>
         </form>

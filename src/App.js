@@ -6,12 +6,12 @@ import HeroSection from "./components/sections/HeroSection";
 import HowToRefer from "./components/sections/HowToRefer";
 import Modal from "./components/common/Modal";
 import ReferralBenefits from "./components/sections/ReferralBenefits";
-import FAQ from "./components/sections/FAQ"; 
-import CTABanner from "./components/sections/CTABanner"; 
-import Footer from "./components/common/Footer"; 
+import FAQ from "./components/sections/FAQ"; // Import the FAQ component
+import CTABanner from "./components/sections/CTABanner"; // Import the CTABanner component
+import Footer from "./components/common/Footer"; // Import the Footer component
 import { Snackbar, Alert, Box, Typography } from "@mui/material";
-import { sendReferral } from "./api/apiService";
-import "./index.css"; 
+import { sendReferral } from "./api/apiService"; // Correct import path
+import "./index.css"; // Ensure global styles are applied
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -35,7 +35,7 @@ function App() {
         setSnackbarMessage("Referral submitted successfully!");
         setSnackbarSeverity("success");
         setSnackbarOpen(true);
-        setIsModalOpen(false); 
+        setIsModalOpen(false); // Close the modal after successful submission
       } else {
         setSnackbarMessage("Error: Failed to submit referral");
         setSnackbarSeverity("error");
@@ -63,19 +63,16 @@ function App() {
         <ReferralBenefits />
       </Box>
       <Box mt={12}>
-        {" "}
-        {}
-        <FAQ /> {}
+        {/* Increased space between ReferralBenefits and FAQ */}
+        <FAQ /> {/* Add the FAQ component here */}
       </Box>
       <Box mt={8}>
-        {" "}
-        {}
-        <CTABanner /> {}
+        {/* Add some space between FAQ and CTABanner */}
+        <CTABanner /> {/* Add the CTABanner component here */}
       </Box>
       <Box mt={8}>
-        {" "}
-        {}
-        <Footer /> {}
+        {/* Add some space between CTABanner and Footer */}
+        <Footer /> {/* Add the Footer component here */}
       </Box>
       {isModalOpen && (
         <Modal onClose={handleCloseModal} onSubmit={handleFormSubmit} />
