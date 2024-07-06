@@ -39,15 +39,15 @@ const NavigationBar = () => {
   return (
     <>
       <AppBar
-        position="sticky" // Make the AppBar sticky
+        position="sticky"
         color="transparent"
         elevation={0}
         sx={{
           px: { xs: 2, sm: 4, md: 8, lg: 10, xl: 12 },
           py: 1,
-          boxShadow: "0 4px 2px -2px rgba(0,0,0,0.1)", // Add shadow to the bottom border
-          backgroundColor: "#fff", // Ensure background is white to match the image
-          minHeight: "80px", // Increase the height of the AppBar
+          boxShadow: "0 4px 2px -2px rgba(0,0,0,0.1)",
+          backgroundColor: "#fff",
+          minHeight: "80px",
         }}
       >
         <Toolbar sx={{ justifyContent: "space-between", padding: 0 }}>
@@ -68,8 +68,8 @@ const NavigationBar = () => {
                 backgroundColor: "#007bff",
                 marginLeft: "24px",
                 borderRadius: "4px",
-                padding: "12px 24px", // Increase padding for larger button
-                fontSize: "1.2rem", // Increase font size
+                padding: "12px 24px",
+                fontSize: "1rem",
                 "&:hover": {
                   backgroundColor: "#0056b3",
                 },
@@ -103,8 +103,8 @@ const NavigationBar = () => {
             <Button
               sx={{
                 textTransform: "none",
-                fontSize: "1.2rem", // Increase font size
-                padding: "12px 24px", // Increase padding for larger button
+                fontSize: "1rem",
+                padding: "8px 16px",
                 mx: 2,
               }}
               color="inherit"
@@ -114,8 +114,8 @@ const NavigationBar = () => {
             <Button
               sx={{
                 textTransform: "none",
-                fontSize: "1.2rem", // Increase font size
-                padding: "12px 24px", // Increase padding for larger button
+                fontSize: "1rem",
+                padding: "8px 16px",
                 mx: 2,
               }}
               color="inherit"
@@ -125,8 +125,8 @@ const NavigationBar = () => {
             <Button
               sx={{
                 textTransform: "none",
-                fontSize: "1.2rem", // Increase font size
-                padding: "12px 24px", // Increase padding for larger button
+                fontSize: "1rem",
+                padding: "8px 16px",
                 mx: 2,
               }}
               color="inherit"
@@ -143,8 +143,8 @@ const NavigationBar = () => {
                 color: "#000",
                 marginRight: "8px",
                 textTransform: "none",
-                fontSize: "1.2rem", // Increase font size
-                padding: "12px 24px", // Increase padding for larger button
+                fontSize: "1rem",
+                padding: "8px 16px",
               }}
             >
               Login
@@ -152,8 +152,8 @@ const NavigationBar = () => {
             <Button
               sx={{
                 textTransform: "none",
-                fontSize: "1.2rem", // Increase font size
-                padding: "12px 24px", // Increase padding for larger button
+                fontSize: "1rem",
+                padding: "8px 16px",
               }}
               variant="contained"
               color="primary"
