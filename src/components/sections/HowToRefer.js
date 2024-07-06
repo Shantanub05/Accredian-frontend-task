@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Box, Typography, Container, Button } from "@mui/material";
-import howToReferImage from "../../assets/how-to-refer.png"; // Ensure the path is correct
+import howToReferImage from "../../assets/how-to-refer.png"; 
 
 const HowToRefer = ({ onReferNowClick }) => {
   return (
@@ -42,7 +42,7 @@ const HowToRefer = ({ onReferNowClick }) => {
           variant="contained"
           color="primary"
           onClick={onReferNowClick}
-          sx={{ mt: 2, px: 4, py: 1.5, fontSize: "1rem" }} // Adjust padding and font size for the button
+          sx={{ mt: 2, px: 4, py: 1.5, fontSize: "1rem" }} 
         >
           Refer Now
         </Button>
