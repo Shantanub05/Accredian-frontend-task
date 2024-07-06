@@ -5,7 +5,11 @@ import NavigationBar from "./components/NavigationBar";
 import HeroSection from "./components/HeroSection";
 import HowToRefer from "./components/HowToRefer";
 import Modal from "./components/Modal";
-import { Snackbar, Alert } from "@mui/material";
+import ReferralBenefits from "./components/ReferralBenefits";
+import FAQ from "./components/FAQ"; // Import the FAQ component
+import CTABanner from "./components/CTABanner"; // Import the CTABanner component
+import Footer from "./components/Footer"; // Import the Footer component
+import { Snackbar, Alert, Box, Typography } from "@mui/material";
 import { sendReferral } from "./components/apiService"; // Correct import path
 import "./index.css"; // Ensure global styles are applied
 
@@ -55,6 +59,24 @@ function App() {
       <MainNavigationTabs />
       <HeroSection onReferNowClick={handleReferNowClick} />
       <HowToRefer onReferNowClick={handleReferNowClick} />
+      <Box mt={8}>
+        <ReferralBenefits />
+      </Box>
+      <Box mt={12}>
+        {" "}
+        {/* Increased space between ReferralBenefits and FAQ */}
+        <FAQ /> {/* Add the FAQ component here */}
+      </Box>
+      <Box mt={8}>
+        {" "}
+        {/* Add some space between FAQ and CTABanner */}
+        <CTABanner /> {/* Add the CTABanner component here */}
+      </Box>
+      <Box mt={8}>
+        {" "}
+        {/* Add some space between CTABanner and Footer */}
+        <Footer /> {/* Add the Footer component here */}
+      </Box>
       {isModalOpen && (
         <Modal onClose={handleCloseModal} onSubmit={handleFormSubmit} />
       )}
