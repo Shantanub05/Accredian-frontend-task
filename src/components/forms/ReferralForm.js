@@ -11,7 +11,7 @@ import {
   FormControl,
   InputLabel,
 } from "@mui/material";
-import { sendReferral } from "../components/apiService"; // Import the sendReferral function
+import { sendReferral } from "../apiService"; // Import the sendReferral function
 
 const ReferralForm = () => {
   const [formData, setFormData] = useState({

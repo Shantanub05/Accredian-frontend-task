@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Box, Typography, Container, Button } from "@mui/material";
-import howToReferImage from "../assets/how-to-refer.png"; // Ensure the path is correct
+import howToReferImage from "../../assets/how-to-refer.png"; // Ensure the path is correct
 
 const HowToRefer = ({ onReferNowClick }) => {
   return (

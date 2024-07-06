@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import TopNavigationBar from "./components/TopNavigationBar";
-import MainNavigationTabs from "./components/MainNavigationTabs";
-import NavigationBar from "./components/NavigationBar";
-import HeroSection from "./components/HeroSection";
-import HowToRefer from "./components/HowToRefer";
-import Modal from "./components/Modal";
-import ReferralBenefits from "./components/ReferralBenefits";
-import FAQ from "./components/FAQ"; // Import the FAQ component
-import CTABanner from "./components/CTABanner"; // Import the CTABanner component
-import Footer from "./components/Footer"; // Import the Footer component
+import TopNavigationBar from "./components/common/TopNavigationBar";
+import MainNavigationTabs from "./components/common/MainNavigationTabs";
+import NavigationBar from "./components/common/NavigationBar";
+import HeroSection from "./components/sections/HeroSection";
+import HowToRefer from "./components/sections/HowToRefer";
+import Modal from "./components/common/Modal";
+import ReferralBenefits from "./components/sections/ReferralBenefits";
+import FAQ from "./components/sections/FAQ"; // Import the FAQ component
+import CTABanner from "./components/sections/CTABanner"; // Import the CTABanner component
+import Footer from "./components/common/Footer"; // Import the Footer component
 import { Snackbar, Alert, Box, Typography } from "@mui/material";
-import { sendReferral } from "./components/apiService"; // Correct import path
+import { sendReferral } from "./api/apiService"; // Correct import path
 import "./index.css"; // Ensure global styles are applied
 
 function App() {

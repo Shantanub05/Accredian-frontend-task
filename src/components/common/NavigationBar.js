@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import logo from "../assets/logo.png"; // Import the logo image
+import logo from "../../assets/logo.png"; // Import the logo image
 
 const NavigationBar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);

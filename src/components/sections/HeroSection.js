@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Box, Button, Typography, Container, Grid } from "@mui/material";
-import heroImage from "../assets/hero-image.png"; // Ensure this path is correct
+import heroImage from "../../assets/hero-image.png"; // Ensure this path is correct
 
 const HeroSection = ({ onReferNowClick }) => {
   return (
