@@ -1,8 +1,6 @@
-// src/components/HeroSection.js
-
 import React from "react";
 import { Box, Button, Typography, Container, Grid } from "@mui/material";
-import heroImage from "../../assets/hero-image.png"; 
+import heroImage from "../../assets/hero-image.png"; // Ensure this path is correct
 
 const HeroSection = ({ onReferNowClick }) => {
   return (
@@ -13,14 +11,14 @@ const HeroSection = ({ onReferNowClick }) => {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "#e9f3ff", 
+          backgroundColor: "#e9f3ff",
           borderRadius: "15px",
           padding: "40px",
           textAlign: "center",
           mt: { xs: 2, md: 4 },
           position: "relative",
           overflow: "hidden",
-          boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)", 
+          boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)",
         }}
       >
         <Grid container spacing={2} alignItems="center">
@@ -32,7 +30,7 @@ const HeroSection = ({ onReferNowClick }) => {
                 gutterBottom
                 sx={{
                   fontWeight: "bold",
-                  fontSize: { xs: "2rem", md: "3rem" }, 
+                  fontSize: { xs: "2rem", md: "3rem" },
                 }}
               >
                 Let’s Learn & Earn
@@ -42,7 +40,7 @@ const HeroSection = ({ onReferNowClick }) => {
                 component="p"
                 gutterBottom
                 sx={{
-                  fontSize: { xs: "1.2rem", md: "1.5rem" }, 
+                  fontSize: { xs: "1.2rem", md: "1.5rem" },
                   mt: 2,
                 }}
               >
@@ -53,7 +51,7 @@ const HeroSection = ({ onReferNowClick }) => {
                   color="primary"
                   sx={{
                     fontWeight: "bold",
-                    fontSize: { xs: "1.2rem", md: "1.5rem" }, 
+                    fontSize: { xs: "1.2rem", md: "1.5rem" },
                   }}
                 >
                   Rs. 15,000
@@ -63,7 +61,7 @@ const HeroSection = ({ onReferNowClick }) => {
                 variant="contained"
                 color="primary"
                 onClick={onReferNowClick}
-                sx={{ mt: 2, px: 4, py: 1.5, fontSize: "1rem" }} 
+                sx={{ mt: 2, px: 4, py: 1.5, fontSize: "1rem" }}
               >
                 Refer Now
               </Button>
@@ -86,7 +84,7 @@ const HeroSection = ({ onReferNowClick }) => {
                 maxWidth: "100%",
                 height: "auto",
                 position: "relative",
-                bottom: "-60px", 
+                bottom: "-60px",
               }}
             />
           </Grid>

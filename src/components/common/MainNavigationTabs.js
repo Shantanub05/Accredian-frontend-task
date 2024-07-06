@@ -1,5 +1,3 @@
-// src/components/MainNavigationTabs.js
-
 import React, { useState } from "react";
 import { Tabs, Tab, Box } from "@mui/material";
 
@@ -22,8 +20,8 @@ const MainNavigationTabs = () => {
           },
         }}
         sx={{
-          maxWidth: "600px", 
-          margin: "0 auto", 
+          maxWidth: "100%",
+          margin: "0 auto",
           "& .MuiTabs-flexContainer": {
             justifyContent: "center",
             backgroundColor: "#f5f5f5",
@@ -37,7 +35,7 @@ const MainNavigationTabs = () => {
             fontWeight: "bold",
             borderRadius: "25px",
             mx: 1,
-            minHeight: "36px", 
+            minHeight: "36px",
             py: 1,
             px: 2,
           },
