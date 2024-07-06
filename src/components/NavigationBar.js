@@ -84,9 +84,17 @@ const NavigationBar = () => {
               open={Boolean(anchorEl)}
               onClose={handleMenuClose}
             >
-              <MenuItem onClick={handleMenuClose}>Course 1</MenuItem>
-              <MenuItem onClick={handleMenuClose}>Course 2</MenuItem>
-              <MenuItem onClick={handleMenuClose}>Course 3</MenuItem>
+              <MenuItem onClick={handleMenuClose}>Data Science</MenuItem>
+              <MenuItem onClick={handleMenuClose}>Product Management</MenuItem>
+              <MenuItem onClick={handleMenuClose}>General Management</MenuItem>
+              <MenuItem onClick={handleMenuClose}>HR Analytics</MenuItem>
+              <MenuItem onClick={handleMenuClose}>Sales and Marketing</MenuItem>
+              <MenuItem onClick={handleMenuClose}>
+                Digital Transformation
+              </MenuItem>
+              <MenuItem onClick={handleMenuClose}>
+                Operations & Supply Chain Management
+              </MenuItem>
             </Menu>
           </Box>
           <Box

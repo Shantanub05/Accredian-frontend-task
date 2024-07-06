@@ -20,6 +20,7 @@ const HeroSection = ({ onReferNowClick }) => {
           mt: { xs: 2, md: 4 },
           position: "relative",
           overflow: "hidden",
+          boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.2)", // Increased shadow for a lifted effect
         }}
       >
         <Grid container spacing={2} alignItems="center">
@@ -29,26 +30,26 @@ const HeroSection = ({ onReferNowClick }) => {
                 variant="h2"
                 component="h1"
                 gutterBottom
-                sx={{ 
+                sx={{
                   fontWeight: "bold",
                   fontSize: { xs: "2rem", md: "3rem" }, // Adjust font size for responsiveness
                 }}
               >
                 Let’s Learn & Earn
               </Typography>
-              <Typography 
-                variant="h5" 
-                component="p" 
+              <Typography
+                variant="h5"
+                component="p"
                 gutterBottom
                 sx={{
                   fontSize: { xs: "1.2rem", md: "1.5rem" }, // Adjust font size for responsiveness
-                  mt: 2
+                  mt: 2,
                 }}
               >
                 Get a chance to win up-to{" "}
-                <Typography 
-                  component="span" 
-                  variant="h5" 
+                <Typography
+                  component="span"
+                  variant="h5"
                   color="primary"
                   sx={{
                     fontWeight: "bold",
