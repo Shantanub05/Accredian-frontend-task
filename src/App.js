@@ -9,7 +9,7 @@ import ReferralBenefits from "./components/sections/ReferralBenefits";
 import FAQ from "./components/sections/FAQ"; // Import the FAQ component
 import CTABanner from "./components/sections/CTABanner"; // Import the CTABanner component
 import Footer from "./components/common/Footer"; // Import the Footer component
-import { Snackbar, Alert, Box, CircularProgress } from "@mui/material";
+import { Snackbar, Alert, Box, Typography } from "@mui/material";
 import { sendReferral } from "./api/apiService"; // Correct import path
 import "./index.css"; // Ensure global styles are applied
 
@@ -18,7 +18,6 @@ function App() {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [snackbarSeverity, setSnackbarSeverity] = useState("success");
-  const [isSubmitting, setIsSubmitting] = useState(false); // State for spinner
 
   const handleReferNowClick = () => {
     setIsModalOpen(true);
@@ -29,31 +28,24 @@ function App() {
   };
 
   const handleFormSubmit = async (formData) => {
-    setIsSubmitting(true); // Show spinner
+    try {
+      const response = await sendReferral(formData);
 
-    // Simulate 2-second delay
-    setTimeout(async () => {
-      try {
-        const response = await sendReferral(formData);
-
-        if (response && response.data) {
-          setSnackbarMessage("Referral submitted successfully!");
-          setSnackbarSeverity("success");
-          setSnackbarOpen(true);
-          setIsModalOpen(false); // Close the modal after successful submission
-        } else {
-          setSnackbarMessage("Error: Failed to submit referral");
-          setSnackbarSeverity("error");
-          setSnackbarOpen(true);
-        }
-      } catch (error) {
-        setSnackbarMessage(`Error: ${error.message}`);
+      if (response && response.data) {
+        setSnackbarMessage("Referral submitted successfully!");
+        setSnackbarSeverity("success");
+        setSnackbarOpen(true);
+        setIsModalOpen(false); // Close the modal after successful submission
+      } else {
+        setSnackbarMessage("Error: Failed to submit referral");
         setSnackbarSeverity("error");
         setSnackbarOpen(true);
-      } finally {
-        setIsSubmitting(false); // Hide spinner
       }
-    }, 2000);
+    } catch (error) {
+      setSnackbarMessage(`Error: ${error.message}`);
+      setSnackbarSeverity("error");
+      setSnackbarOpen(true);
+    }
   };
 
   const handleSnackbarClose = () => {
@@ -84,22 +76,6 @@ function App() {
       </Box>
       {isModalOpen && (
         <Modal onClose={handleCloseModal} onSubmit={handleFormSubmit} />
-      )}
-      {isSubmitting && (
-        <div style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          backgroundColor: 'rgba(255, 255, 255, 0.8)',
-          zIndex: 1000
-        }}>
-          <CircularProgress />
-        </div>
       )}
       <Snackbar
         open={snackbarOpen}
