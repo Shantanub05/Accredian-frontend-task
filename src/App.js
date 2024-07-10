@@ -6,12 +6,12 @@ import HeroSection from "./components/sections/HeroSection";
 import HowToRefer from "./components/sections/HowToRefer";
 import Modal from "./components/common/Modal";
 import ReferralBenefits from "./components/sections/ReferralBenefits";
-import FAQ from "./components/sections/FAQ"; // Import the FAQ component
-import CTABanner from "./components/sections/CTABanner"; // Import the CTABanner component
-import Footer from "./components/common/Footer"; // Import the Footer component
+import FAQ from "./components/sections/FAQ"; 
+import CTABanner from "./components/sections/CTABanner"; 
+import Footer from "./components/common/Footer"; 
 import { Snackbar, Alert, Box, Typography } from "@mui/material";
-import { sendReferral } from "./api/apiService"; // Correct import path
-import "./index.css"; // Ensure global styles are applied
+import { sendReferral } from "./api/apiService"; 
+import "./index.css";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -35,7 +35,7 @@ function App() {
         setSnackbarMessage("Referral submitted successfully!");
         setSnackbarSeverity("success");
         setSnackbarOpen(true);
-        setIsModalOpen(false); // Close the modal after successful submission
+        setIsModalOpen(false); 
       } else {
         setSnackbarMessage("Error: Failed to submit referral");
         setSnackbarSeverity("error");
@@ -63,16 +63,13 @@ function App() {
         <ReferralBenefits />
       </Box>
       <Box mt={12}>
-        {/* Increased space between ReferralBenefits and FAQ */}
-        <FAQ /> {/* Add the FAQ component here */}
+        <FAQ /> 
       </Box>
       <Box mt={8}>
-        {/* Add some space between FAQ and CTABanner */}
-        <CTABanner /> {/* Add the CTABanner component here */}
+       <CTABanner /> 
       </Box>
       <Box mt={8}>
-        {/* Add some space between CTABanner and Footer */}
-        <Footer /> {/* Add the Footer component here */}
+       <Footer /> 
       </Box>
       {isModalOpen && (
         <Modal onClose={handleCloseModal} onSubmit={handleFormSubmit} />
